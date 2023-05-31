@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Better New Tab",
+  "description": "Replace new tab with a custom page.",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage",
+    "http://api.openweathermap.org/"
+  ]
+}

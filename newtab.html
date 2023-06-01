@@ -4,45 +4,75 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" type="text/css" href="assets/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
   <div id="settingsPanel" class="side-panel">
+
     <a href="javascript:void(0)" class="closebtn" id="closeBtn">×</a>
     <h2>Settings</h2>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
 
-
-
-
-    <div class="accordion">
-      <button class="accordion-btn">Add Icon</button>
-      <div class="accordion-panel">
-        <div id="iconForm">
-          <label for="iconSelect">Select Icon:</label><br>
-          <div class="selectors">
-            <div class="custom-select">
-              <input type="text" id="iconSelect" placeholder="⬇" readonly>
-              <div id="dropdownContainer" class="dropdown-container"></div>
-            </div>
-            <input type="text" id="selectedIcon" placeholder="No icon selected" readonly>
-          </div>
-          <br>
-          <label for="url">URL:</label><br>
-          <input type="text" id="url" name="url"><br>
-          <button id="addIcon">Add Icon</button>
-        </div>
-      </div>
+    <div class="widget">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
     </div>
 
-    <h3>Saved Icons:</h3>
-    <div id="savedIcons"></div>
-    <button id="saveBtn">Save</button>
+
+    <div class="widget">
+      <div class="accordion">
+        <button class="accordion-btn">Quick Links</button>
+        <div class="accordion-panel">
+          <div id="iconForm">
+            <label for="iconSelect">Select Icon:</label><br>
+            <div class="selectors">
+              <div class="custom-select">
+                <input type="text" id="iconSelect" placeholder="⬇" readonly>
+                <div id="dropdownContainer" class="dropdown-container"></div>
+              </div>
+              <input type="text" id="selectedIcon" placeholder="No icon selected" readonly>
+            </div>
+            <br>
+            <label for="url">URL:</label><br>
+            <input type="text" id="url" name="url"><br>
+            <button id="addIcon">Add quick link</button>
+          </div>
+          <h3>Saved Icons:</h3>
+          <div id="savedIcons"></div>
+      </div>
+    </div>
   </div>
+
+  <div class="widget">
+    <div class="accordion">
+      <button class="accordion-btn">Change Font</button>
+      <div class="accordion-panel">
+        <label for="fontSelect">Select Font:</label><br>
+        <select id="fontSelect">
+          <option value="Alegreya, serif">Alegreya</option>
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="Georgia, serif">Georgia</option>
+          <option value="Inter, sans serif">Inter</option>
+          <option value="Montserrat, serif">Montserrat</option>
+          <option value="Noto Sans, sans serif">Noto Sans</option>
+          <option value="Merriweather, serif">Merriweather</option>
+          <option value="Poppins, serif">Poppins</option>
+          <option value="Roboto, sans serif">Roboto</option>
+          <option value="Oswald, sans serif">Oswald</option>
+          <option value="Playfair Display, serif">Playfair Display</option>
+          <option value="Verdana, sans-serif">Verdana</option>
+          <!-- Add more font options as needed -->
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <button id="saveBtn">Save</button>
+
+</div>
 
   <button id="openBtn" class="openbtn"><img width="30px" src="assets/img/settings.png"></button>
   <div class="content">

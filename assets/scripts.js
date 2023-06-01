@@ -1,9 +1,4 @@
 
-
-// Rest of the code...
-
-
-
 // List all icons from the "brands" folder
 var iconFiles = [
   "google",
@@ -253,4 +248,35 @@ setInterval(() => {
   document.getElementById('date').innerText = date.toLocaleDateString();
 }, 1000);
 
+// Function to save the selected font to Chrome storage
+function saveFontToStorage(font) {
+  chrome.storage.local.set({ selectedFont: font }, function () {
+    console.log("Font saved to storage.");
+  });
+}
 
+// Function to retrieve the selected font from Chrome storage
+function getFontFromStorage(callback) {
+  chrome.storage.local.get("selectedFont", function (result) {
+    var selectedFont = result.selectedFont;
+    callback(selectedFont);
+  });
+}
+
+// Change font
+var fontSelect = document.getElementById("fontSelect");
+fontSelect.addEventListener("change", function () {
+  var selectedFont = this.value;
+  document.body.style.fontFamily = selectedFont;
+  saveFontToStorage(selectedFont);
+});
+
+// Read the selected font from storage on load
+document.addEventListener("DOMContentLoaded", function () {
+  getFontFromStorage(function (selectedFont) {
+    if (selectedFont) {
+      fontSelect.value = selectedFont;
+      document.body.style.fontFamily = selectedFont;
+    }
+  });
+});

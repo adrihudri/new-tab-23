@@ -9,5 +9,6 @@
   "permissions": [
     "storage",
     "http://api.openweathermap.org/"
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://kit.fontawesome.com/; object-src 'self'"
 }

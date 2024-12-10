@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+</head>
+<body>
+
+
+  <div id="container">
+
+    <div id="widgets">
+
+      <div class="parent">
+        <div class="div1 widget">
+            <h1 id="welcome">Hello, <span id="name">User</span></h1> 
+            <div class="time-weather">
+            <div class="left px30" id="time">
+                <span id="current-time"></span><br>
+                <span id="current-date"></span>
+            </div>
+            <div class="right px30" id="weather-container">
+                <div id="weather-city"></div>
+                <div id="weather-description"></div>
+                <div class="in-f">
+                  <img id="weather-icon" alt="Weather Icon" />
+                  <div id="weather-temperature"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="widget">
+   
+        <div class="div4"> </div>
+        </div>
+
+
+      <div class="widget"></div>
+  
+    
+      <div class="widget" id="bookmarks"></div>
+    </div>
+
+    <div id="gear-icon">⚙️</div>
+  </div>
+
+
+
+  <div id="edit-mode-container" class="hidden">
+
+    <div id="edit-welcome">
+      <label for="name-input">Name: </label>
+      <input type="text" id="name-input" />
+    </div>
+    <div id="edit-city">
+        <label for="city-input">City: </label>
+        <input type="text" id="city-input" />
+
+        <label>
+          Temperature Unit:
+          <select id="unit-input">
+              <option value="metric">Celsius</option>
+              <option value="imperial">Fahrenheit</option>
+          </select>
+      </label>
+    </div>
+    <div id="edit-widgets-width">
+        <label for="widgets-width-input">Widgets Width: </label>
+        <input type="range" id="widgets-width-input" min="600" max="2000" step="100" value="1000" />
+        <span id="widgets-width-value">1000px</span>
+      </div>
+    <div id="edit-time-format">
+        <label for="time-format-input">24 Hour Format: </label>
+        <input type="checkbox" id="time-format-input" />
+      </div>
+      
+    <div id="edit-background">
+      <label for="background-select">Background: </label>
+      <select id="background-select">
+        <option value="Nature">Nature</option>
+        <option value="Cities">Cities</option>
+        <option value="Animals">Animals</option>
+        <option value="Space">Space</option>
+        <option value="Christmas">Christmas</option>
+        <option value="Custom">Custom</option>
+      </select>
+      <div id="custom-keyword-container" style="display: none;">
+        <label for="custom-keyword-input">Custom Keyword: </label>
+        <input type="text" id="custom-keyword-input" />
+      </div>
+    </div>
+  
+    <button id="apply-button">Apply</button>
+  </div>
+
+  <script src="/assets/scripts.js"></script>
+</body>
+</html>

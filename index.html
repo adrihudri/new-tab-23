@@ -5,6 +5,7 @@
   <title>New Tab</title>
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
 </head>
 <body>
 
@@ -31,19 +32,40 @@
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="widget">
-   
-        <div class="div4"> </div>
+
+        <div class="widget" id="custom-links-container">
+          <!-- Add-link wrapper -->
+          <div id="add-link-wrapper" class="left">
+            <input
+              type="text"
+              id="new-link-url"
+              placeholder="Enter a new link URL..."
+              class="slide-input"
+            />
+            <button id="plus-button">
+              <span class="mdi mdi-web-plus"></span>
+            </button>
+          </div>
+        
+          <ul id="custom-links-list" class="link-grid"></ul>
+        </div>
+        
+        <div class="widget div3" id="tech-news-container">
+          <h3>Latest Tech News</h3>
+          <div id="tech-news-list">
+            <div class="news-item">
+              <div class="news-title">Loading news...</div>
+              <div class="news-source">TechCrunch</div>
+            </div>
+          </div>
+          <button id="refresh-news-btn" class="refresh-btn">
+            <span class="mdi mdi-refresh"></span>
+          </button>
         </div>
 
-
-      <div class="widget"></div>
-  
-    
-      <div class="widget" id="bookmarks"></div>
-    </div>
+      </div>
+      
+  </div>
 
     <div id="gear-icon">⚙️</div>
   </div>
